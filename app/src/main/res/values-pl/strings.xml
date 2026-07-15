@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NextQR Scanner</string>
+
+    <!-- Nawigacja -->
+    <string name="nav_scan">Skanuj</string>
+    <string name="nav_generate">Generuj</string>
+    <string name="nav_history">Historia</string>
+    <string name="nav_settings">Ustawienia</string>
+
+    <!-- Skaner -->
+    <string name="action_toggle_flash">Włącz/wyłącz latarkę</string>
+    <string name="action_batch_mode">Tryb wsadowy</string>
+    <string name="permission_camera_rationale">Dostęp do aparatu jest potrzebny do skanowania kodów. Obraz jest przetwarzany na urządzeniu i nigdy nie jest wysyłany.</string>
+    <string name="permission_grant">Zezwól na dostęp do aparatu</string>
+
+    <!-- Akcje -->
+    <string name="action_open">Otwórz</string>
+    <string name="action_open_anyway">Otwórz mimo to (niezalecane)</string>
+    <string name="action_view_details">Zobacz szczegóły</string>
+    <string name="action_open_link">Otwórz link</string>
+    <string name="action_connect_wifi">Połącz z Wi-Fi</string>
+    <string name="action_add_contact">Dodaj kontakt</string>
+    <string name="action_send_email">Wyślij e-mail</string>
+    <string name="action_send_sms">Wyślij SMS</string>
+    <string name="action_call">Zadzwoń</string>
+    <string name="action_add_event">Dodaj do kalendarza</string>
+    <string name="action_open_map">Otwórz w mapach</string>
+    <string name="action_open_wallet">Otwórz w portfelu</string>
+    <string name="action_open_payment">Otwórz płatność</string>
+    <string name="action_copy">Kopiuj</string>
+
+    <!-- Baner bezpieczeństwa -->
+    <string name="security_safe">Nie wykryto zagrożeń</string>
+    <string name="security_suspicious">Podejrzany link — zachowaj ostrożność</string>
+    <string name="security_dangerous">Zablokowano niebezpieczny link</string>
+    <string name="security_unknown">Nie udało się zweryfikować — sprawdź adres</string>
+
+    <!-- Ostrzeżenia URL -->
+    <string name="warn_shortened">Skrócony link ukrywa prawdziwy adres</string>
+    <string name="warn_ip_host">Używa adresu IP zamiast domeny</string>
+    <string name="warn_punycode">Host w Punycode może podszywać się pod inną stronę</string>
+    <string name="warn_unusual_tld">Nietypowa domena najwyższego poziomu, częsta w nadużyciach</string>
+    <string name="warn_non_https">Brak bezpiecznego połączenia HTTPS</string>
+    <string name="warn_credentials">Adres zawiera osadzone dane logowania</string>
+    <string name="warn_subdomains">Nadmiar subdomen może maskować prawdziwy host</string>
+    <string name="warn_lookalike">Mieszane znaki mogą podszywać się pod prawdziwą domenę</string>
+    <string name="warn_qrljacking">Wykryto przekierowanie logowania — możliwy QRLjacking</string>
+
+    <!-- Generator -->
+    <string name="generator_content_hint">Tekst lub adres URL do zakodowania</string>
+    <string name="generator_preview_desc">Podgląd wygenerowanego kodu QR</string>
+    <string name="generator_customize_premium">Odblokuj kolory, logo i kształty w wersji Premium</string>
+    <string name="generator_save">Zapisz do galerii</string>
+
+    <!-- Historia -->
+    <string name="history_favorites">Pokaż ulubione</string>
+    <string name="history_search">Szukaj w historii</string>
+
+    <!-- Ustawienia -->
+    <string name="settings_go_premium">Przejdź na Premium</string>
+    <string name="settings_dynamic_color">Kolory dynamiczne (Material You)</string>
+    <string name="settings_theme">Motyw</string>
+    <string name="settings_vibrate">Wibracja po skanie</string>
+    <string name="settings_sound">Dźwięk po skanie</string>
+    <string name="settings_url_safety">Sprawdzaj bezpieczeństwo linków</string>
+    <string name="settings_url_safety_sub">Weryfikuj linki przez Google Safe Browsing</string>
+    <string name="settings_history_enabled">Zapisuj historię skanów</string>
+    <string name="settings_ad_consent">Reklamy spersonalizowane</string>
+    <string name="settings_ad_consent_sub">Zezwól na reklamy spersonalizowane (możesz to zmienić w każdej chwili)</string>
+    <string name="settings_delete_data">Usuń wszystkie moje dane</string>
+    <string name="settings_delete_data_sub">Trwale usuń zaszyfrowaną historię skanów</string>
+
+    <!-- Premium -->
+    <string name="premium_title">Premium</string>
+    <string name="premium_headline">Odblokuj pełne możliwości</string>
+    <string name="premium_active">Premium jest aktywne. Dziękujemy!</string>
+    <string name="premium_loading">Wczytywanie produktów…</string>
+    <string name="premium_feature_no_ads">Brak reklam</string>
+    <string name="premium_feature_customization">Pełna personalizacja QR</string>
+    <string name="premium_feature_batch_export">Eksport wsadowy (CSV/PDF)</string>
+    <string name="premium_feature_unlimited_history">Historia bez limitu</string>
+    <string name="premium_feature_cloud_backup">Szyfrowana kopia w chmurze</string>
+
+    <!-- Onboarding -->
+    <string name="onboard_scan_title">Skanuj wszystko</string>
+    <string name="onboard_scan_body">Kody QR i kreskowe są rozpoznawane natychmiast, w pełni offline.</string>
+    <string name="onboard_security_title">Bezpieczne z założenia</string>
+    <string name="onboard_security_body">Każdy link jest sprawdzany pod kątem phishingu i malware przed otwarciem.</string>
+    <string name="onboard_privacy_title">Twoje dane należą do Ciebie</string>
+    <string name="onboard_privacy_body">Historia jest szyfrowana na urządzeniu. Prosimy tylko o dostęp do aparatu.</string>
+    <string name="onboard_next">Dalej</string>
+    <string name="onboard_start">Rozpocznij</string>
+
+    <!-- Szczegóły -->
+    <string name="detail_title">Szczegóły</string>
+    <string name="detail_type">Format: %1$s</string>
+
+    <!-- Widget -->
+    <string name="widget_scan">Skanuj</string>
+</resources>

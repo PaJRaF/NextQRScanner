@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Stylised QR mark centred within the adaptive-icon safe zone. -->
+    <group android:translateX="30" android:translateY="30">
+        <!-- Top-left finder -->
+        <path android:fillColor="#FFFFFF"
+            android:pathData="M0,0 h14 v14 h-14 z M3,3 v8 h8 v-8 z" />
+        <!-- Top-right finder -->
+        <path android:fillColor="#FFFFFF"
+            android:pathData="M34,0 h14 v14 h-14 z M37,3 v8 h8 v-8 z" />
+        <!-- Bottom-left finder -->
+        <path android:fillColor="#FFFFFF"
+            android:pathData="M0,34 h14 v14 h-14 z M3,37 v8 h8 v-8 z" />
+        <!-- Data modules -->
+        <path android:fillColor="#FFFFFF"
+            android:pathData="M20,4 h4 v4 h-4 z M26,10 h4 v4 h-4 z M20,16 h4 v4 h-4 z
+                M34,20 h4 v4 h-4 z M40,26 h4 v4 h-4 z M44,34 h4 v4 h-4 z
+                M20,40 h4 v4 h-4 z M26,44 h4 v4 h-4 z M34,40 h4 v4 h-4 z
+                M4,20 h4 v4 h-4 z M10,26 h4 v4 h-4 z" />
+    </group>
+</vector>

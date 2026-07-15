@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Base app theme. Colours are driven by Compose (MaterialTheme /
+        dynamic colour), so this XML theme only handles the window chrome and
+        the launch (splash) screen. Light variant here; dark in values-night.
+    -->
+    <style name="Theme.NextQrScanner" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/ic_launcher_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Launch theme: shows the splash icon, then swaps to the app theme. -->
+    <style name="Theme.NextQrScanner.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.NextQrScanner</item>
+    </style>
+</resources>

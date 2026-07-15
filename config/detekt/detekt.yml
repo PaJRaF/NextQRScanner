@@ -1,0 +1,43 @@
+# Detekt configuration. Built on top of the default rule set
+# (buildUponDefaultConfig = true); overrides below relax a few rules that are
+# noisy for Compose/Android code and keep the signal high.
+
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+
+complexity:
+  LongMethod:
+    active: true
+    threshold: 80
+  LongParameterList:
+    active: true
+    functionThreshold: 8
+    constructorThreshold: 10
+    ignoreDefaultParameters: true
+  TooManyFunctions:
+    active: false
+
+style:
+  MagicNumber:
+    active: false
+  ReturnCount:
+    active: true
+    max: 4
+  MaxLineLength:
+    active: true
+    maxLineLength: 120
+  UnusedPrivateMember:
+    active: true
+
+naming:
+  FunctionNaming:
+    # Composable functions are PascalCase by convention.
+    ignoreAnnotated: [ 'Composable' ]
+
+comments:
+  active: false
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false

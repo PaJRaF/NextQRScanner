@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NextQR Scanner</string>
+
+    <!-- Navigation -->
+    <string name="nav_scan">Scan</string>
+    <string name="nav_generate">Generate</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Scanner -->
+    <string name="action_toggle_flash">Toggle flashlight</string>
+    <string name="action_batch_mode">Batch mode</string>
+    <string name="permission_camera_rationale">Camera access is needed to scan codes. Images are processed on your device and never uploaded.</string>
+    <string name="permission_grant">Grant camera access</string>
+
+    <!-- Smart actions -->
+    <string name="action_open">Open</string>
+    <string name="action_open_anyway">Open anyway (not recommended)</string>
+    <string name="action_view_details">View details</string>
+    <string name="action_open_link">Open link</string>
+    <string name="action_connect_wifi">Connect to Wi-Fi</string>
+    <string name="action_add_contact">Add contact</string>
+    <string name="action_send_email">Send email</string>
+    <string name="action_send_sms">Send SMS</string>
+    <string name="action_call">Call</string>
+    <string name="action_add_event">Add to calendar</string>
+    <string name="action_open_map">Open in maps</string>
+    <string name="action_open_wallet">Open in wallet</string>
+    <string name="action_open_payment">Open payment</string>
+    <string name="action_copy">Copy</string>
+
+    <!-- Security banner -->
+    <string name="security_safe">No threats detected</string>
+    <string name="security_suspicious">Suspicious link — proceed with caution</string>
+    <string name="security_dangerous">Dangerous link blocked</string>
+    <string name="security_unknown">Could not verify — check the address carefully</string>
+
+    <!-- URL warnings -->
+    <string name="warn_shortened">Shortened link hides the real destination</string>
+    <string name="warn_ip_host">Uses a raw IP address instead of a domain</string>
+    <string name="warn_punycode">Punycode host may impersonate another site</string>
+    <string name="warn_unusual_tld">Unusual top-level domain often used for abuse</string>
+    <string name="warn_non_https">Not served over secure HTTPS</string>
+    <string name="warn_credentials">Contains embedded credentials in the address</string>
+    <string name="warn_subdomains">Excessive subdomains can disguise the real host</string>
+    <string name="warn_lookalike">Mixed-script characters may spoof a real domain</string>
+    <string name="warn_qrljacking">Login redirect detected — possible QRLjacking</string>
+
+    <!-- Generator -->
+    <string name="generator_content_hint">Text or URL to encode</string>
+    <string name="generator_preview_desc">Generated QR code preview</string>
+    <string name="generator_customize_premium">Unlock colours, logo and shapes with Premium</string>
+    <string name="generator_save">Save to gallery</string>
+
+    <!-- History -->
+    <string name="history_favorites">Show favorites</string>
+    <string name="history_search">Search history</string>
+
+    <!-- Settings -->
+    <string name="settings_go_premium">Upgrade to Premium</string>
+    <string name="settings_dynamic_color">Use dynamic colours (Material You)</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_vibrate">Vibrate on scan</string>
+    <string name="settings_sound">Sound on scan</string>
+    <string name="settings_url_safety">Check link safety</string>
+    <string name="settings_url_safety_sub">Verify scanned links against Google Safe Browsing</string>
+    <string name="settings_history_enabled">Save scan history</string>
+    <string name="settings_ad_consent">Personalised ads</string>
+    <string name="settings_ad_consent_sub">Allow personalised ads (you can change this any time)</string>
+    <string name="settings_delete_data">Delete all my data</string>
+    <string name="settings_delete_data_sub">Permanently erase your encrypted scan history</string>
+
+    <!-- Premium -->
+    <string name="premium_title">Premium</string>
+    <string name="premium_headline">Unlock the full experience</string>
+    <string name="premium_active">Premium is active. Thank you!</string>
+    <string name="premium_loading">Loading products…</string>
+    <string name="premium_feature_no_ads">No ads</string>
+    <string name="premium_feature_customization">Full QR customization</string>
+    <string name="premium_feature_batch_export">Batch export (CSV/PDF)</string>
+    <string name="premium_feature_unlimited_history">Unlimited history</string>
+    <string name="premium_feature_cloud_backup">Encrypted cloud backup</string>
+
+    <!-- Onboarding -->
+    <string name="onboard_scan_title">Scan anything</string>
+    <string name="onboard_scan_body">QR codes and barcodes are recognised instantly and fully offline.</string>
+    <string name="onboard_security_title">Safe by design</string>
+    <string name="onboard_security_body">Every link is checked for phishing and malware before you open it.</string>
+    <string name="onboard_privacy_title">Your data stays yours</string>
+    <string name="onboard_privacy_body">History is encrypted on your device. We only ask for the camera permission.</string>
+    <string name="onboard_next">Next</string>
+    <string name="onboard_start">Get started</string>
+
+    <!-- Detail -->
+    <string name="detail_title">Details</string>
+    <string name="detail_type">Format: %1$s</string>
+
+    <!-- Widget -->
+    <string name="widget_scan">Scan</string>
+</resources>

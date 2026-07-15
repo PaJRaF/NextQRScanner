@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Gradle dependencies (incl. version catalog) — weekly, grouped.
+  - package-ecosystem: gradle
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      androidx:
+        patterns: [ "androidx.*" ]
+      kotlin:
+        patterns: [ "org.jetbrains.kotlin*", "com.google.devtools.ksp*" ]
+
+  # GitHub Actions workflow dependencies.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly

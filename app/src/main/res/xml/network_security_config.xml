@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Enforces HTTPS everywhere. Cleartext (HTTP) traffic is globally disabled,
+    so any accidental plain-HTTP request will fail rather than leak data.
+    Only TLS 1.2+ endpoints are reachable at runtime.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Only the system CA store is trusted; no user-added CAs, which
+                 blocks trivial MITM via a user-installed proxy certificate. -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Explicit pins for the Safe Browsing endpoint could be added here once a
+         stable pin set is agreed; left out to avoid hard outages on Google's
+         cert rotation. Domain configs still forbid cleartext. -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">safebrowsing.googleapis.com</domain>
+        <domain includeSubdomains="true">googleapis.com</domain>
+    </domain-config>
+</network-security-config>
