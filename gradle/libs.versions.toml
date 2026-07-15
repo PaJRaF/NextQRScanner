@@ -43,7 +43,7 @@ kotlinxSerialization = "1.7.3"
 zxing = "3.5.3"
 
 # Monetization
-playBilling = "7.1.1"
+playBilling = "9.1.0"
 playServicesAds = "23.6.0"
 
 # Coroutines
