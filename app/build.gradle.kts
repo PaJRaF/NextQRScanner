@@ -174,6 +174,8 @@ dependencies {
     implementation(libs.camerax.camera2)
     implementation(libs.camerax.lifecycle)
     implementation(libs.camerax.view)
+    implementation(libs.androidx.concurrent.futures.ktx)
+    implementation(libs.guava)
 
     // ML Kit
     implementation(libs.mlkit.barcode)

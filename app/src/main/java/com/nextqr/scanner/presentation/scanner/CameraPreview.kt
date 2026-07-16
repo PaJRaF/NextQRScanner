@@ -8,7 +8,6 @@ import androidx.camera.core.Preview
 import androidx.camera.core.resolutionselector.ResolutionSelector
 import androidx.camera.core.resolutionselector.ResolutionStrategy
 import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.camera.lifecycle.awaitInstance
 import androidx.camera.view.PreviewView
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -20,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.concurrent.futures.await
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.nextqr.scanner.data.scanner.BarcodeAnalyzer
 import com.nextqr.scanner.domain.model.BarcodeType
@@ -56,7 +56,7 @@ fun CameraPreview(
     var camera by remember { mutableStateOf<Camera?>(null) }
 
     LaunchedEffect(lifecycleOwner) {
-        val cameraProvider = ProcessCameraProvider.awaitInstance(context)
+        val cameraProvider = ProcessCameraProvider.getInstance(context).await()
 
         val preview = Preview.Builder().build().also {
             it.setSurfaceProvider(previewView.surfaceProvider)

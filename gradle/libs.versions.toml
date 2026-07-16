@@ -21,6 +21,8 @@ hiltNavigationCompose = "1.2.0"
 
 # CameraX
 camerax = "1.4.1"
+concurrentFutures = "1.2.0"
+guava = "33.3.1-android"
 
 # ML Kit
 mlkitBarcode = "17.3.0"
@@ -98,6 +100,12 @@ camerax-core = { group = "androidx.camera", name = "camera-core", version.ref = 
 camerax-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
 camerax-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
 camerax-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
+# concurrent-futures-ktx provides the suspend `await()` extension for
+# ListenableFuture; full guava provides the real ListenableFuture class and,
+# via capability conflict, evicts the empty `listenablefuture:9999-empty` stub
+# that otherwise breaks ProcessCameraProvider.getInstance() at compile time.
+androidx-concurrent-futures-ktx = { group = "androidx.concurrent", name = "concurrent-futures-ktx", version.ref = "concurrentFutures" }
+guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 
 # ML Kit
 mlkit-barcode = { group = "com.google.mlkit", name = "barcode-scanning", version.ref = "mlkitBarcode" }
