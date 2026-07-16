@@ -75,6 +75,7 @@ cp keystore.properties.sample keystore.properties
 ## Dokumentacja
 
 - [`docs/BUILD_AND_RELEASE.md`](docs/BUILD_AND_RELEASE.md) — jak skompilować, przetestować na telefonie i opublikować w Google Play
+- [`docs/MONETIZATION_GUIDE.md`](docs/MONETIZATION_GUIDE.md) — krok po kroku: AdMob, Play Billing i uruchomienie zarabiania (z miejscami w kodzie)
 - [`docs/PROJECT_STRUCTURE.md`](docs/PROJECT_STRUCTURE.md) — struktura projektu i opis modułów
 - [`docs/CONFIG_FILES.md`](docs/CONFIG_FILES.md) — wszystkie pliki konfiguracyjne
 - [`docs/PRE_LAUNCH_CHECKLIST.md`](docs/PRE_LAUNCH_CHECKLIST.md) — checklista przed publikacją w Google Play
