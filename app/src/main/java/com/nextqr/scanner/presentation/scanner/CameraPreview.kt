@@ -29,8 +29,8 @@ import java.util.concurrent.Executors
  * CameraX preview bound to the composition lifecycle. Frames are analysed
  * on-device by [BarcodeAnalyzer]; nothing leaves the device.
  *
- * Uses the coroutine-friendly [ProcessCameraProvider.awaitInstance] so we never
- * touch Guava's ListenableFuture directly.
+ * Uses the coroutine `await()` extension on the provider future so we never
+ * block a thread waiting for the camera provider.
  *
  * @param torchOn drives the flash/torch.
  * @param onBarcode called for each decoded frame (on the analyzer thread — the
