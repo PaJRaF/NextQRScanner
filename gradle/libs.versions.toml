@@ -46,7 +46,7 @@ zxing = "3.5.3"
 
 # Monetization
 playBilling = "7.1.1"
-playServicesAds = "23.6.0"
+playServicesAds = "25.4.0"
 
 # Coroutines
 coroutines = "1.9.0"
