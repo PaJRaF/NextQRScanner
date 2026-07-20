@@ -1,0 +1,18 @@
+# =============================================================================
+#  oscam.dvbapi  --  reguly priorytetow / ignorowania dla DVBAPI
+# -----------------------------------------------------------------------------
+#  Format:  P/I/M: caid:provid:srvid:ecmpid:chid  (P=priorytet, I=ignoruj,
+#  M=mapuj). Puste pola dopasowuja wszystko.
+#
+#  Pusty plik = OSCam odszyfrowuje wszystko, na co pozwalaja karty/peery.
+#  Ponizej tylko przyklady - odkomentuj wedle potrzeb.
+# =============================================================================
+
+# Priorytet dla konkretnego CAID (odszyfruj najpierw ta karta):
+# P: 0100:000000
+
+# Ignoruj CAID, ktorego swiadomie nie chcesz odszyfrowywac:
+# I: 0500
+
+# Mapowanie ECM PID (rzadko potrzebne, dla nietypowych transponderow):
+# M: 0100:000000:0000:1234

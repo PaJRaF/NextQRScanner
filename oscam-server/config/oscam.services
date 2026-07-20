@@ -1,0 +1,17 @@
+# =============================================================================
+#  oscam.services  --  grupy uslug (CAID:provider:srvid)
+# -----------------------------------------------------------------------------
+#  Sluzy do ograniczania dostepu kont (parametr "services" w oscam.user)
+#  oraz do priorytetyzacji/blokowania konkretnych uslug.
+#
+#  Skladnia: caid:provid:srvid  (mozna podac liste rozdzielona przecinkami).
+# =============================================================================
+
+# Przyklad: grupa "tylko_premium" ograniczona do jednego CAID/providera.
+[tylko_premium]
+caid                          = 0100
+provid                        = 0100:000000
+
+# Przyklad: grupa uslug ktore chcemy CALKOWICIE blokowac dla wszystkich.
+#[blokuj]
+#caid                          = 0500:032830

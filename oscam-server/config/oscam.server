@@ -1,0 +1,67 @@
+# =============================================================================
+#  oscam.server  --  definicje CZYTNIKOW (readers)
+# -----------------------------------------------------------------------------
+#  Czytnik = zrodlo control words: lokalna karta (smartcard) lub peer sieciowy.
+#  Kazdy blok [reader] to jedno zrodlo. Ponizej znajduja sie 3 przyklady:
+#    1) lokalna karta w czytniku USB (PCSC / smartreader / phoenix),
+#    2) peer CCcam (odbior od zaufanego serwera),
+#    3) peer Newcamd.
+#
+#  UWAGA PRAWNA: uzywaj wylacznie WLASNEJ, legalnej karty/subskrypcji oraz
+#  peerow, z ktorymi masz zgode operatora. Zobacz docs/SECURITY.md.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+#  1) Lokalna karta - czytnik USB (np. Smargo/SmartReader+ w trybie mouse)
+# -----------------------------------------------------------------------------
+[reader]
+label                         = local_card
+enable                        = 1
+protocol                      = mouse
+device                        = /dev/ttyUSB0
+# Wykrywanie karty: cd / dsr / cts / rts / gnd
+detect                        = cd
+# Czestotliwosci taktowania (kHz). 357/357 to bezpieczny domyslny start;
+# dla wielu kart dziala tez 600/600 (szybszy init) - dobierz eksperymentalnie.
+mhz                           = 357
+cardmhz                       = 357
+# CAID / provider - zostaw puste, aby OSCam wykryl automatycznie po inicie.
+# caid                        = 0100
+# ident                       = 0100:000000
+group                         = 1
+# EMM (aktualizacja uprawnien karty): unique,shared,global,per-reader
+emmcache                      = 1,3,2,0
+# Odswiez uprawnienia karty co N sekund (0 = tylko przy starcie).
+ecmwhitelist                  =
+audisabled                    = 0
+
+# -----------------------------------------------------------------------------
+#  2) Peer CCcam - odbior od zaufanego serwera (klient CCcam)
+# -----------------------------------------------------------------------------
+#[reader]
+#label                         = peer_cccam
+#enable                        = 0
+#protocol                      = cccam
+#device                        = <HOST_PEERA>,<PORT>
+#user                          = <LOGIN>
+#password                      = <HASLO>
+#group                         = 2
+## Ile hopow dalej udostepniac (0 = tylko lokalnie, nie reshare).
+#cccreshare                    = 0
+#cccversion                    = 2.3.0
+#cccmaxhops                    = 1
+#inactivitytimeout             = 30
+
+# -----------------------------------------------------------------------------
+#  3) Peer Newcamd - odbior od serwera newcamd
+# -----------------------------------------------------------------------------
+#[reader]
+#label                         = peer_newcamd
+#enable                        = 0
+#protocol                      = newcamd
+#device                        = <HOST_PEERA>,<PORT>
+#key                           = 0102030405060708091011121314
+#user                          = <LOGIN>
+#password                      = <HASLO>
+#group                         = 2
+#caid                          = 0100

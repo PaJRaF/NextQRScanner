@@ -1,0 +1,11 @@
+# Sekrety i dane runtime OSCam - NIE commituj wartosci produkcyjnych
+*.pem
+*.key
+*.crt
+oscam.log
+*.log
+backups/
+oscam-config-*.tar.gz
+
+# Lokalne nadpisania konfiguracji z prawdziwymi haslami
+config/*.local

@@ -1,0 +1,41 @@
+# =============================================================================
+#  systemd unit dla OSCam (instalacja natywna, bez Dockera)
+# -----------------------------------------------------------------------------
+#  Instalacja:
+#    sudo cp oscam.service /etc/systemd/system/
+#    sudo systemctl daemon-reload
+#    sudo systemctl enable --now oscam
+#
+#  Zaklada: binarny /usr/local/bin/oscam, konfiguracja w /etc/oscam,
+#  dedykowany uzytkownik "oscam".
+# =============================================================================
+
+[Unit]
+Description=OSCam softcam server
+Documentation=https://wiki.streamboard.tv/wiki/OSCam
+After=network-online.target pcscd.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=oscam
+Group=oscam
+# -b = foreground; -c = katalog z konfiguracja
+ExecStart=/usr/local/bin/oscam -b -c /etc/oscam
+Restart=on-failure
+RestartSec=5
+# --- Utwardzenie (sandbox systemd) ---
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/log/oscam /etc/oscam
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+# Dostep do czytnika USB (odkomentuj jesli uzywasz lokalnej karty):
+# DeviceAllow=/dev/ttyUSB0 rw
+# SupplementaryGroups=dialout
+
+[Install]
+WantedBy=multi-user.target

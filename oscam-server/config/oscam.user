@@ -1,0 +1,41 @@
+# =============================================================================
+#  oscam.user  --  konta KLIENTOW laczacych sie z serwerem
+# -----------------------------------------------------------------------------
+#  Kazdy blok [account] to jeden login. "group" musi pokrywac sie z grupa
+#  czytnika w oscam.server, inaczej klient nie dostanie CW.
+#
+#  Zasada minimalnych uprawnien: nadawaj tylko te grupy/CAID, ktore sa
+#  faktycznie potrzebne. Uzywaj silnych, unikalnych hasel.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+#  Konto lokalnego dekodera (DVBAPI na tym samym hoscie)
+# -----------------------------------------------------------------------------
+[account]
+user                          = local
+pwd                           = <ZMIEN_HASLO_LOCAL>
+group                         = 1
+# AU = ktory czytnik aktualizuje EMM dla tego uzytkownika.
+au                            = local_card
+# Monitorowanie: 0=normal, 1=monitor-only, 2=full monitor
+monlevel                      = 1
+# Limit rownoczesnych polaczen z tego konta.
+uniq                          = 1
+# Ile ECM na sekunde wolno (ochrona przed naduzyciem).
+# cccmaxhops                  = 0
+
+# -----------------------------------------------------------------------------
+#  Przykladowe konto klienta zdalnego (np. drugi dekoder w LAN)
+# -----------------------------------------------------------------------------
+#[account]
+#user                          = klient1
+#pwd                           = <ZMIEN_HASLO_KLIENT1>
+#group                         = 1
+## Nie pozwalaj temu klientowi aktualizowac EMM.
+#au                            = 0
+#uniq                          = 1
+#monlevel                      = 0
+## Ogranicz dostep tylko do wybranych CAID/uslug (patrz oscam.services).
+## services                    = tylko_premium
+## Whitelist IP klienta.
+## allowedprotocols            = cccam,newcamd

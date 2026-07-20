@@ -1,0 +1,52 @@
+# =============================================================================
+#  docker-compose - uruchomienie serwera OSCam w kontenerze
+# -----------------------------------------------------------------------------
+#  Uruchomienie:  docker compose up -d --build
+#  Panel webif:   https://<host>:8888  (login/haslo z config/oscam.conf)
+#
+#  Konfiguracja jest montowana z ../config (read-only, aby kontener nie
+#  nadpisywal Twoich plikow). Logi trafiaja do wolumenu.
+# =============================================================================
+
+services:
+  oscam:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        OSCAM_REF: master
+    image: oscam:latest
+    container_name: oscam
+    restart: unless-stopped
+    # Wymagane tylko przy lokalnym czytniku USB (przekazanie urzadzenia):
+    # devices:
+    #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+    ports:
+      - "8888:8888"      # webif (HTTPS)
+      - "12000:12000"    # CCcam (opcjonalnie)
+      - "15000:15000"    # Newcamd (opcjonalnie)
+    volumes:
+      - ../config:/etc/oscam:ro
+      - oscam-logs:/var/log/oscam
+    # Ograniczenia zasobow (dopasuj do sprzetu).
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 256M
+    # Utwardzenie kontenera.
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  oscam-logs:
