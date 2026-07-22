@@ -1,8 +1,8 @@
 [versions]
 # Build tools
 agp = "8.7.3"
-kotlin = "2.0.21"
-ksp = "2.0.21-1.0.28"
+kotlin = "2.4.10"
+ksp = "2.3.10"
 detekt = "1.23.7"
 
 # AndroidX core
@@ -39,7 +39,7 @@ playIntegrity = "1.4.0"
 # Networking (Safe Browsing / Premium sync)
 retrofit = "2.11.0"
 okhttp = "4.12.0"
-kotlinxSerialization = "1.7.3"
+kotlinxSerialization = "1.11.0"
 
 # QR generation
 zxing = "3.5.3"
@@ -49,7 +49,7 @@ playBilling = "7.1.1"
 playServicesAds = "23.6.0"
 
 # Coroutines
-coroutines = "1.9.0"
+coroutines = "1.11.0"
 
 # Coil (image loading for gallery scanning / logo picking)
 coil = "2.7.0"
@@ -62,7 +62,7 @@ hiltWork = "1.2.0"
 junit = "4.13.2"
 mockk = "1.13.13"
 turbine = "1.2.0"
-coroutinesTest = "1.9.0"
+coroutinesTest = "1.11.0"
 androidxTestExt = "1.2.1"
 espresso = "3.6.1"
 truth = "1.4.4"
