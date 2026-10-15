@@ -42,7 +42,7 @@ okhttp = "4.12.0"
 kotlinxSerialization = "1.7.3"
 
 # QR generation
-zxing = "3.5.3"
+zxing = "3.5.4"
 
 # Monetization
 playBilling = "7.1.1"
